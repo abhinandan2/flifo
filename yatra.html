@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>iDelivr Chat</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        idelivrCallback = function() {
+            // idelivr.mobile('1234567890');
+            // idelivr.email('rahul@idelivr.in');
+            var obj = {};
+            obj.prod_code = "Yatra";
+            // obj.name = "rahul";
+            var screenInfo = {};
+            screenInfo.backScreenId = null;
+            screenInfo.presentScreenId = null;
+            screenInfo.frontScreenId = null;
+            idelivr.context(obj);
+            idelivr.screenInfo(screenInfo);
+        }
+    </script>
+    <script src="./js/jquery.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="jquery.hover3d.min.js"></script>
+    <link rel="stylesheet" href="./css/yatra.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="css/calendarLibrary.css">
+     <link rel="stylesheet" type="text/css" href="css/carousal.css">
+     <link rel="stylesheet" type="text/css" href="css/flifo.css">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.138.0.min.js"></script>
+    <script src="./js/yatra.js"></script>
+</head>
+
+<body>
+    <div class="idelivr-chat-window" id="idelivr_chat_window_1">
+      <!-- <div class="idelivr-panel-closer">
+        <div class="idelivr-launcher-closer-icon"></div>
+      </div> -->
+        <div class="idelivr-panel idelivr-panel-default" style="margin: 0 auto;">
+            <div class="idelivr-panel-heading">
+              <div class="idelivr-chat-avatar">
+                 <p class="idelivr-panel-title" style="text-align: center; position: absolute;">Personal Assistant</p>
+                <img style="margin-top: 16px;" src="https://s3.ap-south-1.amazonaws.com/chatwidget/yatra/yatra_logo.jpg">
+               
+
+              </div>
+              <div class="idelivr-profile-body">
+                <div class="idelivr-panel-operator"></div>
+                <div class="idelivr-panel-time"></div>
+              </div>
+              <div class="idelivr-box-logo">
+                <img class="idelivr-profile-logo" src="">
+              </div>
+            </div>
+            <div id="idelivr_messages" class="idelivr-msg_container_base" style="position:relative;"></div>
+            <div id="quick_replier" class="idelivr-quick"></div>
+            <div id="calendar_replier" class="idelivr-calendar" style="display: none;">
+              <div class="wrapper">
+                <div id="calendarContainer"></div>
+                <div id="organizerContainer" style="margin-left: 8px;"></div>
+              </div>
+            </div>
+            <div class="idelivr-panel-footer" id="idelivr_footers">
+                <form id="idelivr_message-form" action="#" class="idelivr-footer-form">
+                      <textarea id="idelivr_message" rows="2" placeholder="Type your message here..."></textarea>
+                      <div class="idelivr-options">
+                          <!-- <label for="idelivr-filepicker">
+                              <img class="idelivr-paperclip" src="https://s3.ap-south-1.amazonaws.com/chatwidget/wealthy/paper.png">
+                          </label>--> 
+                          <input type="file" id="idelivr-filepicker" name="file"/>
+                          <img id="idelivr_submit" class="idelivr-sender" src="https://s3.ap-south-1.amazonaws.com/chatwidget/wealthy/send.png">
+                      </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="idelivr-launcher idelivr-launcher-active"> -->
+      <!-- <div class="idelivr-launcher-open-icon"></div> -->
+      <!-- <div class="idelivr-launcher-close-icon"></div> -->
+    <!-- </div> -->
+</body>
+
+<script src="js/calendarLibrary.js"></script>
+<script src="js/flifo.js"></script>
+<script src="js/carousal.js"></script>
+</html>

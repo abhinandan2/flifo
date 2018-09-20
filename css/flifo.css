@@ -1,0 +1,218 @@
+.flight{
+    display: flex;
+    color: black;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 300px;
+    width: 300px;
+    border-radius: 13px;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.38);
+    overflow: hidden;
+    position: relative;
+    margin: 10px auto;
+    z-index: 1;
+    animation: 0.5s ease-out 0s 1 slideInFromLeft;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.fs-header, .fs-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: Roboto, HelveticaNeue, Arial, sans-serif;
+    font-size: 13px;
+}
+
+.h4 {
+    border-bottom: 1px solid #e0e0e0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    font-family: Roboto, HelveticaNeue, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.85px;
+    /*margin: 0;*/
+    padding: 23px 0px 0px 29px;
+    text-transform: uppercase;
+    /*color: rgba(0,0,0,.87);*/
+    transition: color 0.3s ease-in-out;
+    display: flex;
+    -webkit-margin-before: 0.33em;
+    -webkit-margin-after: -0.67em;
+    line-height: 1;
+}
+
+.fs-header-ico {
+    content: '';
+    height: 24px;
+    width: 24px;
+}
+
+.fs-content {
+    transition: color 0.3s ease-in-out;
+    display: block;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding-top: 14px;
+    width: 100%;
+    font-size: 12px;
+
+}
+
+.fs-right{
+    padding-bottom: 14px;
+    padding-left: 86px;
+    padding-top: 0;
+    box-sizing: border-box;
+    line-height: 20px;
+    padding-right: 16px;
+    position: relative;
+    width: 100%;
+    font-size: 12px;
+}
+
+.fs-subtitle {
+    opacity: 0.7;
+}
+
+.fs-row {
+    position: relative;
+    line-height: 20px;
+}
+
+.fs-row__ico {
+    background-size: 18px;
+    height: 18px;
+    left: -25px;
+    position: absolute;
+    top: 5px;
+    width: 18px;
+}
+.fs-row__time{
+    font-size: 16px;
+    display: inline-flex;
+}
+.fs-row__airport {
+
+}
+
+.fs-confirmed {
+
+}
+
+.fs-duration{
+    flex-wrap: wrap;
+    padding-bottom: 12px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    flex-shrink: 1;
+}
+.fs-arrival {
+
+}
+
+
+.arrival__ico {
+    background-image: url(//www.gstatic.com/images/icons/material/system/2x/flight_land_black_18dp.png);
+}
+
+.fs-left {
+    left: 16px;
+    position: absolute;
+    top: 16px;
+    margin-top: -14px;
+    height: 36px;
+    width: 36px;
+}
+
+.flight-status__title {
+    
+}
+
+.flight-status {
+    margin-left: -24px;
+    padding-top: 4px;
+    position: relative; 
+}
+
+.fs-flight__ico {
+    flex: 0 0 auto;
+    margin-right: 4px;
+    position: static;
+}
+
+
+.fs-flights__separator {
+    display: inline-block;
+    margin: 0 4px;
+}
+
+
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 11px;
+    overflow: hidden;
+    background: #74ebd5; /* Fall back */  
+    background: -webkit-linear-gradient(to left, #ACB6E5, #74ebd5);
+    background: linear-gradient(to left, #ACB6E5, #74ebd5); 
+
+}
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 11px;
+    overflow: hidden;
+    background: #74ebd5;
+    background: -webkit-linear-gradient(to left, #ACB6E5, #74ebd5);
+    background: linear-gradient(to left, #ACB6E5, #74ebd5);
+}
+
+.stripes{
+  position: absolute;
+   top: 0;
+   z-index: -1;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 9%;
+   overflow: hidden;
+   transform: skewY(-8deg);
+   transform-origin: 0;
+   background: linear-gradient(-150deg, #25b57f 0%, #acf0b5 70%);
+}
+
+.stripes-bottom{
+  position: absolute;
+   z-index: -1;
+   right: 0;
+   bottom: -50px;
+   left: 0;
+   width: 100%;
+   height: 10%;
+   overflow: hidden;
+   transform: skewY(-8deg);
+   transform-origin: 0;
+   background: linear-gradient(-150deg, #25b57f 0%, #acf0b5 70%);
+}
+
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
