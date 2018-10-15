@@ -1,33 +1,34 @@
 function flifo(data){
 	if(data.flightDetails.length == 1){
 		switch(data.flightDetails[0].airline){
+			switch(data.flightDetails[0].airline){
 			case "AI":
-				flightIco = "./abhi/AirIndia.png";
-				break;
+			flightIco = "https://s3.ap-south-1.amazonaws.com/yatra-images/AirIndia.png";
+			break;
 			case "9W":
-				flightIco = "./abhi/JetAirways.png";
-				break;
+			flightIco = "https://s3.ap-south-1.amazonaws.com/yatra-images/JetAirways.png";
+			break;
 			case "6E": 
-				flightIco = "https://www.gstatic.com/flights/airline_logos/32px/6E.png";
-				break;
+			flightIco = "https://s3.ap-south-1.amazonaws.com/yatra-images/Indigo.png";
+			break;
 			case "IX":
-				flightIco = "./abhi/AirIndiaExpress.png";
-				break;
+			flightIco = "https://s3.ap-south-1.amazonaws.com/yatra-images/AirIndiaExpress.png";
+			break;
 			case "SG":
-				flightIco = "./abhi/SpiceJet.png";
-				break;
+			flightIco = "https://s3.ap-south-1.amazonaws.com/yatra-images/SpiceJet.png";
+			break;
 			case "G8":
-				flightIco = "https://image3.mouthshut.com/images/imagesp/925052736s.png";
-				break;
+			flightIco = "https://s3.ap-south-1.amazonaws.com/yatra-images/GoAir.png";
+			break;
 			case "I5":
-				flightIco = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/AirAsia_New_Logo.svg/32px-AirAsia_New_Logo.svg.png";
-				break;
+			flightIco = "https://s3.ap-south-1.amazonaws.com/yatra-images/air-asia.png";
+			break;
 			case "UK":
-				flightIco = "./abhi/Vistara.png";
-				break;
+			flightIco = "https://s3.ap-south-1.amazonaws.com/yatra-images/Vistara.png";
+			break;
 			default:
-				flightIco = "./abhi/DefaultAirline.png";
-		}
+			flightIco = "https://s3.ap-south-1.amazonaws.com/yatra-images/DefaultAirline.png";
+			}
 		var flightDetails = data.flightDetails[0];
 		if(flightDetails.airlinePnr)
 			flightDetails.airlinePnr = "PNR is " + flightDetails.airlinePnr + " &middot;";
@@ -94,33 +95,33 @@ function flifo(data){
 			var flightIco = "";
 			var ribbon = "";
 			var paxOther = ".";
-			switch(data.flightDetails[index-1].airline){
-				case "AI":
-					flightIco = "./abhi/AirIndia.png";
-					break;
-				case "9W":
-					flightIco = "./abhi/JetAirways.png";
-					break;
-				case "6E": 
-					flightIco = "https://www.gstatic.com/flights/airline_logos/32px/6E.png";
-					break;
-				case "IX":
-					flightIco = "./abhi/AirIndiaExpress.png";
-					break;
-				case "SG":
-					flightIco = "./abhi/SpiceJet.png";
-					break;
-				case "G8":
-					flightIco = "https://image3.mouthshut.com/images/imagesp/925052736s.png";
-					break;
-				case "I5":
-					flightIco = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/AirAsia_New_Logo.svg/32px-AirAsia_New_Logo.svg.png";
-					break;
-				case "UK":
-					flightIco = "./abhi/Vistara.png";
-					break;
-				default:
-					flightIco = "./abhi/DefaultAirline.png";
+			switch(data.flightDetails[0].airline){
+			case "AI":
+			flightIco = "https://s3.ap-south-1.amazonaws.com/yatra-images/AirIndia.png";
+			break;
+			case "9W":
+			flightIco = "https://s3.ap-south-1.amazonaws.com/yatra-images/JetAirways.png";
+			break;
+			case "6E": 
+			flightIco = "https://s3.ap-south-1.amazonaws.com/yatra-images/Indigo.png";
+			break;
+			case "IX":
+			flightIco = "https://s3.ap-south-1.amazonaws.com/yatra-images/AirIndiaExpress.png";
+			break;
+			case "SG":
+			flightIco = "https://s3.ap-south-1.amazonaws.com/yatra-images/SpiceJet.png";
+			break;
+			case "G8":
+			flightIco = "https://s3.ap-south-1.amazonaws.com/yatra-images/GoAir.png";
+			break;
+			case "I5":
+			flightIco = "https://s3.ap-south-1.amazonaws.com/yatra-images/air-asia.png";
+			break;
+			case "UK":
+			flightIco = "https://s3.ap-south-1.amazonaws.com/yatra-images/Vistara.png";
+			break;
+			default:
+			flightIco = "https://s3.ap-south-1.amazonaws.com/yatra-images/DefaultAirline.png";
 			}
 
 			if(data.flightDetails[index-1].passengers.length > 1){
