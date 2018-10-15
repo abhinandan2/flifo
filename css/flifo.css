@@ -1,4 +1,361 @@
 .flight{
+    
+    display: flex;
+    color: black;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 290px;
+    width: 290px;
+    border-radius: 13px;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.38);
+    overflow: hidden;
+    position: relative;
+    margin: 10px auto;
+    /* z-index: 1; */
+    animation: 0.5s ease-out 0s 1 slideInFromLeft;
+    font-family: Lato, Roboto, HelveticaNeue, Arial, sans-serif;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.fs-header, .fs-footer {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+    font-size: 13px;
+}
+
+.h4 {
+    border-bottom: 1px solid #e0e0e0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.85px;
+    /*margin: 0;*/
+    padding: 20px 0px 0px 0px;
+    text-transform: uppercase;
+    /*color: rgba(0,0,0,.87);*/
+    transition: color 0.3s ease-in-out;
+    display: flex;
+    -webkit-margin-before: 0.33em;
+    -webkit-margin-after: -0.67em;
+    line-height: 1;
+    justify-content: center;
+}
+
+.fs-header-ico {
+    content: '';
+    height: 24px;
+    width: 24px;
+}
+
+.fs-content {
+    transition: color 0.3s ease-in-out;
+    display: block;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding-top: 14px;
+    width: 100%;
+    font-size: 12px;
+
+}
+
+.fs-leg-1{
+    border-right: 1px solid rgb(224, 224, 224);
+    padding-bottom: 4px;
+    padding-left: 55px;
+    padding-top: 0;
+    box-sizing: border-box;
+    line-height: 20px;
+    padding-right: 16px;
+    position: relative;
+    width: 50%;
+    font-size: 12px;
+}
+.fs-leg-2{
+    padding-bottom: 1px;
+    padding-top: 0;
+    line-height: 20px;
+    width: 50%;
+    font-size: 12px;
+    box-sizing: border-box;
+
+    float: right;
+    padding-right: 55px;
+    padding-left: 16px;
+    position: relative;
+    text-align: right;
+}
+.fs-left {
+    left: 13px;
+    position: absolute;
+    top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70%;
+    justify-content: center;
+}
+
+.fs-left-2{
+    right: 8px;
+    position: absolute;
+    top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70%;
+    justify-content: center;
+}
+
+.fs-col{
+    display: flex;  
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.fs-subtitle {
+    opacity: 0.7;
+}
+
+.fs-row {
+    position: relative;
+    line-height: 20px;
+}
+
+.fs-row__ico {
+    background-size: 18px;
+    height: 18px;
+    left: -25px;
+    position: absolute;
+    top: 5px;
+    width: 18px;
+}
+.fs-row__time{
+}
+.fs-row__airport {
+    font-size: 16px;
+    display: inline-flex;
+
+}
+
+.fs-confirmed {
+
+}
+
+.fs-duration{
+    justify-content: center;
+    margin-left: 7px;
+    flex-wrap: wrap;
+    padding-bottom: 12px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    flex-shrink: 1;
+}
+.fs-arrival {
+
+}
+
+
+.arrival__ico {
+    background-image: url(//www.gstatic.com/images/icons/material/system/2x/flight_land_black_18dp.png);
+}
+
+
+.flight-status__title {
+    
+}
+
+.flight-status {
+    display: inline-block;
+    margin-left: 30px;
+    padding-top: 4px;
+    position: relative; 
+}
+.flight-status-right {
+    display: inline-block;
+    position: relative;
+    margin-right: -34px;
+    line-height: 1rem;
+    margin-top: 10px;
+    font-style: italic;
+}
+.flight-status-left {
+    display: inline-block;
+    position: relative;
+    margin-left: -34px;
+    line-height: 1rem;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.fs-flight__ico {
+    flex: 0 0 auto;
+    margin-right: 4px;
+    position: static;
+}
+
+
+.fs-flights__separator {
+    display: inline-block;
+    margin: 0 4px;
+}
+
+
+.pnr{
+    font-size: xx-small;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 11px;
+    overflow: hidden;
+    background: #ED213A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 11px;
+    overflow: hidden;
+    background: #ED213A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+.stripes{
+  position: absolute;
+   top: 0;
+   z-index: -1;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 9%;
+   overflow: hidden;
+   transform: skewY(-8deg);
+   transform-origin: 0;
+   background: linear-gradient(-150deg, #25b57f 0%, #acf0b5 70%);
+}
+
+.stripes-bottom{
+  position: absolute;
+   z-index: -1;
+   right: 0;
+   bottom: -50px;
+   left: 0;
+   width: 100%;
+   height: 10%;
+   overflow: hidden;
+   transform: skewY(-8deg);
+   transform-origin: 0;
+   background: linear-gradient(-150deg, #25b57f 0%, #acf0b5 70%);
+}
+
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.ribbon {
+    position: absolute;
+    right: -11px;
+    padding: 0 2px;
+    background: crimson;
+    color: white;
+    font-weight: 700;
+    font-style: italic;
+    /* animation-name: bounceAlpha;
+
+    animation-duration:1.4s;
+    animation-iteration-count:2;
+    animation-timing-function:linear; */
+    animation: slide1 1s ease-in-out 3;
+}
+.ribbon:before {
+    content: "";
+  width: 0;
+  height: 0;
+  border-width: 10px 5px;
+  border-style: solid;
+  border-color: rgb(201,46,46) rgb(201,46,46) rgb(201,46,46) transparent;
+  position: absolute;
+  left: -10px;
+  }
+  .ribbon:after {
+    position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 10px solid rgb(201,46,46);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  right: -10px;
+
+  }
+
+  @keyframes bounceAlpha {
+    0% {opacity: 1; transform: translateX(0px) scale(1);}
+    25%{opacity: 0; transform:translateX(10px) scale(0.9);}
+    26%{opacity: 0; transform:translateX(-10px) scale(0.9);}
+    55% {opacity: 1; transform: translateX(0px) scale(1);}
+  }
+
+  @keyframes slide1 {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+  
+    50% {
+      transform: translate(10px, 0);
+    }
+  }
+
+
+  /* width */
+::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+
+
+/* For Single Non Stop Flight */
+
+.single-flight{
     display: flex;
     color: black;
     flex-direction: column;
@@ -23,7 +380,7 @@
   }
 }
 
-.fs-header, .fs-footer {
+.single-fs-header, .single-fs-footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -31,32 +388,32 @@
     font-size: 13px;
 }
 
-.h4 {
-    border-bottom: 1px solid #e0e0e0;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    font-family: Roboto, HelveticaNeue, Arial, sans-serif;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.85px;
-    /*margin: 0;*/
-    padding: 23px 0px 0px 29px;
-    text-transform: uppercase;
-    /*color: rgba(0,0,0,.87);*/
-    transition: color 0.3s ease-in-out;
-    display: flex;
-    -webkit-margin-before: 0.33em;
-    -webkit-margin-after: -0.67em;
-    line-height: 1;
+.single-h4 {
+  width: 100%;
+  justify-content: center;
+  border-bottom: 1px solid #e0e0e0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  font-family: Roboto, HelveticaNeue, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.85px;
+  padding: 23px 0px 10px 0px;
+  text-transform: uppercase;
+  transition: color 0.3s ease-in-out;
+  display: flex;
+  -webkit-margin-before: 0.33em;
+  -webkit-margin-after: -0.67em;
+  line-height: 1;
 }
 
-.fs-header-ico {
+.single-fs-header-ico {
     content: '';
     height: 24px;
     width: 24px;
 }
 
-.fs-content {
+.single-fs-content {
     transition: color 0.3s ease-in-out;
     display: block;
     border-bottom-left-radius: 8px;
@@ -67,7 +424,7 @@
 
 }
 
-.fs-right{
+.single-fs-right{
     padding-bottom: 14px;
     padding-left: 86px;
     padding-top: 0;
@@ -79,16 +436,16 @@
     font-size: 12px;
 }
 
-.fs-subtitle {
+.single-fs-subtitle {
     opacity: 0.7;
 }
 
-.fs-row {
+.single-fs-row {
     position: relative;
     line-height: 20px;
 }
 
-.fs-row__ico {
+.single-fs-row__ico {
     background-size: 18px;
     height: 18px;
     left: -25px;
@@ -96,19 +453,19 @@
     top: 5px;
     width: 18px;
 }
-.fs-row__time{
+.single-fs-row__airport{
     font-size: 16px;
     display: inline-flex;
 }
-.fs-row__airport {
+.single-fs-row__time {
 
 }
 
-.fs-confirmed {
+.single-fs-confirmed {
 
 }
 
-.fs-duration{
+.single-fs-duration{
     flex-wrap: wrap;
     padding-bottom: 12px;
     padding-top: 10px;
@@ -117,16 +474,16 @@
     white-space: nowrap;
     flex-shrink: 1;
 }
-.fs-arrival {
+.single-fs-arrival {
 
 }
 
 
-.arrival__ico {
-    background-image: url(//www.gstatic.com/images/icons/material/system/2x/flight_land_black_18dp.png);
+.single-arrival__ico {
+    background-image: url(//www.gstatic.com/images/icons/material/system/2x/flight_land_black_18dp.single-png);
 }
 
-.fs-left {
+.single-fs-left {
     left: 16px;
     position: absolute;
     top: 16px;
@@ -135,24 +492,24 @@
     width: 36px;
 }
 
-.flight-status__title {
+.single-flight-status__title {
     
 }
 
-.flight-status {
+.single-flight-status {
     margin-left: -24px;
     padding-top: 4px;
     position: relative; 
 }
 
-.fs-flight__ico {
+.single-fs-flight__ico {
     flex: 0 0 auto;
     margin-right: 4px;
     position: static;
 }
 
 
-.fs-flights__separator {
+.single-fs-flights__separator {
     display: inline-block;
     margin: 0 4px;
 }
@@ -160,29 +517,27 @@
 
 
 
-.footer {
+.single-footer {
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 11px;
     overflow: hidden;
-    background: #74ebd5; /* Fall back */  
-    background: -webkit-linear-gradient(to left, #ACB6E5, #74ebd5);
-    background: linear-gradient(to left, #ACB6E5, #74ebd5); 
-
+    background: #ED213A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.single-1-6 */
+    background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-.header {
+.single-header {
     position: absolute;
     top: 0;
     width: 100%;
     height: 11px;
     overflow: hidden;
-    background: #74ebd5;
-    background: -webkit-linear-gradient(to left, #ACB6E5, #74ebd5);
-    background: linear-gradient(to left, #ACB6E5, #74ebd5);
-}
+    background: #ED213A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.single-1-6 */
+    background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-.stripes{
+.single-stripes{
   position: absolute;
    top: 0;
    z-index: -1;
@@ -197,7 +552,7 @@
    background: linear-gradient(-150deg, #25b57f 0%, #acf0b5 70%);
 }
 
-.stripes-bottom{
+.single-stripes-bottom{
   position: absolute;
    z-index: -1;
    right: 0;
