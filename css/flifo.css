@@ -1,5 +1,5 @@
 .flight{
-    
+    background: white;
     display: flex;
     color: black;
     flex-direction: column;
@@ -12,8 +12,7 @@
     position: relative;
     margin: 10px auto;
     /* z-index: 1; */
-    animation: 0.5s ease-out 0s 1 slideInFromLeft;
-    font-family: Lato, Roboto, HelveticaNeue, Arial, sans-serif;
+    font-family: Lato, HelveticaNeue, Arial, sans-serif;
 }
 
 @keyframes slideInFromLeft {
@@ -45,8 +44,6 @@
     /*color: rgba(0,0,0,.87);*/
     transition: color 0.3s ease-in-out;
     display: flex;
-    -webkit-margin-before: 0.33em;
-    -webkit-margin-after: -0.67em;
     line-height: 1;
     justify-content: center;
 }
@@ -152,12 +149,9 @@
 }
 
 .fs-duration{
-    justify-content: center;
-    margin-left: 7px;
     flex-wrap: wrap;
     padding-bottom: 12px;
     padding-top: 10px;
-    display: flex;
     flex-direction: row;
     white-space: nowrap;
     flex-shrink: 1;
@@ -356,6 +350,7 @@
 /* For Single Non Stop Flight */
 
 .single-flight{
+  background: white;
     display: flex;
     color: black;
     flex-direction: column;
@@ -368,7 +363,7 @@
     position: relative;
     margin: 10px auto;
     z-index: 1;
-    animation: 0.5s ease-out 0s 1 slideInFromLeft;
+    font-family: Lato, Roboto, HelveticaNeue, Arial, sans-serif;
 }
 
 @keyframes slideInFromLeft {
@@ -398,12 +393,10 @@
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.85px;
-  padding: 23px 0px 10px 0px;
+  padding: 14px 0px 14px 0px;
   text-transform: uppercase;
   transition: color 0.3s ease-in-out;
   display: flex;
-  -webkit-margin-before: 0.33em;
-  -webkit-margin-after: -0.67em;
   line-height: 1;
 }
 
@@ -421,7 +414,6 @@
     margin-top: -14px;
     width: 100%;
     font-size: 12px;
-    font-family: 'Lato';
 }
 
 .single-fs-right{
@@ -456,7 +448,6 @@
 .single-fs-row__airport{
     font-size: 16px;
     display: inline-flex;
-    font-family: 'Lato';
 }
 
 .single-fs-row__time {
