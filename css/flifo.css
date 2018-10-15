@@ -418,10 +418,10 @@
     display: block;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-    padding-top: 14px;
+    margin-top: -14px;
     width: 100%;
     font-size: 12px;
-
+    font-family: 'Lato';
 }
 
 .single-fs-right{
@@ -457,6 +457,7 @@
     font-size: 16px;
     display: inline-flex;
 }
+
 .single-fs-row__time {
 
 }

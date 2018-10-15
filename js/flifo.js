@@ -29,6 +29,10 @@ function flifo(data){
 				flightIco = "./abhi/DefaultAirline.png";
 		}
 		var flightDetails = data.flightDetails[0];
+		if(flightDetails.airlinePnr)
+			flightDetails.airlinePnr = "PNR is " + flightDetails.airlinePnr + " &middot;";
+		else
+			flightDetails.airlinePnr = "";
 		var paxOther = flightDetails.passengers.length > 1 ? (" & " + (flightDetails.passengers.length - 1) + " Other(s).") : "";
 		document.getElementById("flightInfo").innerHTML = `
 			    <div class="single-flight">
@@ -43,21 +47,21 @@ function flifo(data){
 										<div class="single-fs-row__ico fas fa-plane-departure"></div>
 										<div class="single-fs-row__time">` + flightDetails.departTime + `</div>
 										<div class="single-fs-row__airport">` + flightDetails.origin + `</div>
-										<div class="single-fs-confirmed fs-subtitle">` + flightDetails.departDate + `</div>
-										<div class="single-fs-duration">` + flightDetails.via + `</div>
+										<div class="single-fs-confirmed">` + flightDetails.departDate + `</div>
+										<div class="single-fs-duration single-fs-subtitle">` + flightDetails.via + `</div>
 									</div>
 									<div class="single-fs-row fs-arrival">
 										<div class="single-fs-row__ico fas fa-plane-arrival"></div>
 										<div class="single-fs-row__time">` + flightDetails.arrivalTime + `</div>
 										<div class="single-fs-row__airport">` + flightDetails.destination + `</div>
-										<div class="single-fs-subtitle">` + flightDetails.arrivalDate + `</div>
+										<div class="">` + flightDetails.arrivalDate + `</div>
 									</div>
 									<div class="single-fs-left">
 										<img alt="Abhioxic" height="36" width="36" src="`+ flightIco +`" class="fs-flight__ico"/>
+										<div class="single-flight-status__title single-fs-subtitle">` + flightDetails.airlineName + `</div>
 									</div>
 									<div class="single-flight-status">
-										<div class="single-flight-status__title">` + flightDetails.airlineName + `</div>
-										<div class="single-fs-subtitle">PNR is ` + flightDetails.airlinePnr + ` &middot; ` + flightDetails.passengers[0] + paxOther + `</div>
+										<div class="single-fs-subtitle">` + flightDetails.airlinePnr + flightDetails.passengers[0] + paxOther + `</div>
 									</div>
 								</div>
 							</div>
@@ -144,25 +148,25 @@ function flifo(data){
 			// Prepend "PNR" if airlinePnr is available, else make it empty.
 			data.flightDetails[index-1].airlinePnr ? data.flightDetails[index-1].airlinePnr="PNR<br/>"+data.flightDetails[index-1].airlinePnr : data.flightDetails[index-1].airlinePnr="";
 			node.innerHTML = ribbon + `
-			<div class="fs-row fs-departure">
-				<div class="fs-row__time">` + data.flightDetails[index-1].departTime + `</div>
-				<div class="fs-row__airport">` + data.flightDetails[index-1].origin + `</div>
-				<div class="fs-confirmed fs-subtitle">` + data.flightDetails[index-1].departDate + `</div>
-				<div class="fs-duration">` + data.flightDetails[index-1].via + `</div>
-			</div>
-			<div class="fs-row fs-arrival">
-				<div class="fs-row__time">` + data.flightDetails[index-1].arrivalTime + `</div>
-				<div class="fs-row__airport">` + data.flightDetails[index-1].destination + `</div>
-				<div class="fs-subtitle">` + data.flightDetails[index-1].arrivalDate + `</div>
-			</div>
-			<div class="`+ cls_left +`">
-				<img alt="Abhioxic" height="26" width="26" src="`+flightIco+`" class="fs-flight__ico"/>
-				<div class="pnr">`+ data.flightDetails[index-1].airlinePnr+`</div>
-			</div>
-			<div class="`+ flight_status +`">
-				<div class="fs-subtitle">` + data.flightDetails[index-1].passengers[0]+`</div>
-				<div class="fs-subtitle">` + paxOther + `</div>
-			</div>
+				<div class="fs-row fs-departure">
+					<div class="fs-row__time">` + data.flightDetails[index-1].departTime + `</div>
+					<div class="fs-row__airport">` + data.flightDetails[index-1].origin + `</div>
+					<div class="fs-confirmed fs-subtitle">` + data.flightDetails[index-1].departDate + `</div>
+					<div class="fs-duration">` + data.flightDetails[index-1].via + `</div>
+				</div>
+				<div class="fs-row fs-arrival">
+					<div class="fs-row__time">` + data.flightDetails[index-1].arrivalTime + `</div>
+					<div class="fs-row__airport">` + data.flightDetails[index-1].destination + `</div>
+					<div class="fs-subtitle">` + data.flightDetails[index-1].arrivalDate + `</div>
+				</div>
+				<div class="`+ cls_left +`">
+					<img alt="Abhioxic" height="26" width="26" src="`+flightIco+`" class="fs-flight__ico"/>
+					<div class="pnr">`+ data.flightDetails[index-1].airlinePnr+`</div>
+				</div>
+				<div class="`+ flight_status +`">
+					<div class="fs-subtitle">` + data.flightDetails[index-1].passengers[0]+`</div>
+					<div class="fs-subtitle">` + paxOther + `</div>
+				</div>
 			`
 			document.getElementById("fs-col").appendChild(node);
 			index++;
