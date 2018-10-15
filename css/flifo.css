@@ -456,6 +456,7 @@
 .single-fs-row__airport{
     font-size: 16px;
     display: inline-flex;
+    font-family: 'Lato';
 }
 
 .single-fs-row__time {
