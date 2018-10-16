@@ -46,14 +46,14 @@ flightIco = "https://s3.ap-south-1.amazonaws.com/yatra-images/DefaultAirline.png
 									<div class="single-fs-row fs-departure">
 										<div class="single-fs-row__ico fas fa-plane-departure"></div>
 										<div class="single-fs-row__time">` + flightDetails.departTime + `</div>
-										<div class="single-fs-row__airport">` + flightDetails.origin + `</div>
+										<div class="single-fs-row__airport">` + flightDetails.originCode + ` - ` +flightDetails.origin + `</div>
 										<div class="single-fs-confirmed">` + flightDetails.departDate + `</div>
 										<div class="single-fs-duration single-fs-subtitle">` + flightDetails.via + `</div>
 									</div>
 									<div class="single-fs-row fs-arrival">
 										<div class="single-fs-row__ico fas fa-plane-arrival"></div>
 										<div class="single-fs-row__time">` + flightDetails.arrivalTime + `</div>
-										<div class="single-fs-row__airport">` + flightDetails.destination + `</div>
+										<div class="single-fs-row__airport">` + flightDetails.destinationCode + ` - ` + flightDetails.destination + `</div>
 										<div class="">` + flightDetails.arrivalDate + `</div>
 									</div>
 									<div class="single-fs-left">
@@ -150,13 +150,15 @@ flightIco = "https://s3.ap-south-1.amazonaws.com/yatra-images/DefaultAirline.png
 			node.innerHTML = ribbon + `
 				<div class="fs-row fs-departure">
 					<div class="fs-row__time">` + data.flightDetails[index-1].departTime + `</div>
-					<div class="fs-row__airport">` + data.flightDetails[index-1].origin + `</div>
+					<div class="fs-row__airport">` + data.flightDetails[index-1].originCode + `</div>
+					<div class="fs-confirmed fs-subtitle">` + data.flightDetails[index-1].origin + `</div>
 					<div class="fs-confirmed fs-subtitle">` + data.flightDetails[index-1].departDate + `</div>
 					<div class="fs-duration">` + data.flightDetails[index-1].via + `</div>
 				</div>
 				<div class="fs-row fs-arrival">
 					<div class="fs-row__time">` + data.flightDetails[index-1].arrivalTime + `</div>
-					<div class="fs-row__airport">` + data.flightDetails[index-1].destination + `</div>
+					<div class="fs-row__airport">` + data.flightDetails[index-1].destinationCode + `</div>
+					<div class="fs-confirmed fs-subtitle">` + data.flightDetails[index-1].destination + `</div>
 					<div class="fs-subtitle">` + data.flightDetails[index-1].arrivalDate + `</div>
 				</div>
 				<div class="`+ cls_left +`">

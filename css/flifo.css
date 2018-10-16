@@ -3,7 +3,7 @@
     display: flex;
     color: black;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: baseline;
     height: 290px;
     width: 290px;
     border-radius: 13px;
@@ -59,10 +59,10 @@
     display: block;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-    padding-top: 14px;
+    padding-top: 0px;
     width: 100%;
     font-size: 12px;
-
+    margin-top: 7px;
 }
 
 .fs-leg-1{
@@ -125,7 +125,7 @@
 
 .fs-row {
     position: relative;
-    line-height: 20px;
+    line-height: 19px;
 }
 
 .fs-row__ico {
@@ -150,8 +150,8 @@
 
 .fs-duration{
     flex-wrap: wrap;
-    padding-bottom: 12px;
-    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
     flex-direction: row;
     white-space: nowrap;
     flex-shrink: 1;
@@ -181,7 +181,7 @@
     position: relative;
     margin-right: -34px;
     line-height: 1rem;
-    margin-top: 10px;
+    margin-top: 0px;
     font-style: italic;
 }
 .flight-status-left {
@@ -189,7 +189,7 @@
     position: relative;
     margin-left: -34px;
     line-height: 1rem;
-    margin-top: 10px;
+    margin-top: 0px;
     font-style: italic;
 }
 
@@ -363,7 +363,7 @@
     position: relative;
     margin: 10px auto;
     z-index: 1;
-    font-family: Lato, Roboto, HelveticaNeue, Arial, sans-serif;
+    font-family: Lato, 'Rubik', Roboto, HelveticaNeue, Arial, sans-serif;
 }
 
 @keyframes slideInFromLeft {
